@@ -27,3 +27,10 @@ class CourseDeleteView(DeleteView):
     model = Course
     template_name = 'cbvApp/delete.html'
     success_url = '/'
+    
+    
+class CourseUpdateView(UpdateView):
+    model = Course
+    template_name = 'cbvApp/update.html'
+    form_class = CourseForm
+    success_url = '/'

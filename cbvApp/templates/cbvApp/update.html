@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Edit Course Detail</title>
+        <!-- <style>
+            table{
+                text-align: right;
+            }
+        </style> -->
+    </head>
+    <body>
+        <h1>Edit Course</h1>
+        <form method="post">
+            <table>
+                {{ form.as_table }}
+                {% csrf_token %}
+            </table>
+            <br>
+            <button type="submit">Save</button>
+        </form>
+    </body>
+</html>

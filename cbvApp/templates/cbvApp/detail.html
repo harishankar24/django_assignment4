@@ -12,7 +12,7 @@
             <h3><li>Rating: {{ course.rating }}</li></h3>
         </ol>
         <ul>
-            <h3><li><a href="">Edit</a></li></h3>
+            <h3><li><a href="{% url 'update' course.id %}">Edit</a></li></h3>
             <h3><li><a href="{% url 'delete' course.id %}">Delete</a></li></h3>
             <h3><li><a href="{% url 'home' %}">Go to Home page</a></li></h3>
         </ul>
