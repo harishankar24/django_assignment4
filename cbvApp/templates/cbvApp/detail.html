@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>Course Detail Page</h1>
+        <br>
+        <ol>
+            <h3><li>Course Name: {{ course.cname }}</li></h3>
+            <h3><li>Description: {{ course.description }}</li></h3>
+            <h3><li>Instructor: {{ course.instructor }}</li></h3>
+            <h3><li>Rating: {{ course.rating }}</li></h3>
+        </ol>
+        <ul>
+            <h3><li><a href="">Edit</a></li></h3>
+            <h3><li><a href="{% url 'delete' course.id %}">Delete</a></li></h3>
+            <h3><li><a href="{% url 'home' %}">Go to Home page</a></li></h3>
+        </ul>
+        
+    </body>
+</html>

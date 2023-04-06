@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.CourseListView.as_view(), name='home'),
     path('create/', views.CourseCreateView.as_view(), name='create'),
+    path('detail/<int:pk>', views.CourseDetailView.as_view(), name='detail'),
+    path('delete/<int:pk>', views.CourseDeleteView.as_view(), name='delete'),
 ]

@@ -14,19 +14,22 @@
         <h1>Course List</h1>
         <table border="2">
             <thead>
+                <th> ID </th>
                 <th> Course Name </th>
-                <th> Description </th>
-                <th> Instructor </th>
+                <!-- <th> Description </th> -->
+                <!-- <th> Instructor </th> -->
                 <th> Rating </th>
             </thead>
             {% for course in course_list %}
             <tr>
+                <td>{{ course.id }}</td>
                 <td>{{ course.cname }}</td>
-                <td>{{ course.description }}</td>
-                <td>{{ course.instructor }}</td>
+                <!-- <td>{{ course.description }}</td> -->
+                <!-- <td>{{ course.instructor }}</td> -->
                 <td>{{ course.rating }}</td>
-                <td><a href="">Edit</a></td>
-                <td><a href="">Delete</a></td>
+                <!-- <td><a href="">Edit</a></td> -->
+                <!-- <td><a href="">Delete</a></td> -->
+                <td><a href="{% url 'detail' course.id %}">See Details</a></td>
             </tr>
             {% endfor %}
         </table>

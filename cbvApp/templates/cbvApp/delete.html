@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Delete</title>
+    <style>
+        p{
+            font-size: 22px;
+        }
+        button{
+            font-size: 14px;
+            margin-right: 6px;
+            padding: 2px 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>Delete course <strong>{{ course.cname }}</strong> instructed by <strong>{{ course.instructor }}</strong> ?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+        <button><a href="{% url 'detail' course.id %}">Cancel</a></button>
+    </form>
+</body>
+</html>
